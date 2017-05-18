@@ -13,19 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20170518140540) do
 
-  create_table "figures", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "figures_titles", force: :cascade do |t|
+  create_table "figure_titles", force: :cascade do |t|
     t.integer "figure_id"
     t.integer "title_id"
+  end
+
+  create_table "figures", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "landmarks", force: :cascade do |t|
     t.string  "name"
     t.integer "figure_id"
-    t.string  "year_completed"
+    t.integer "year_completed"
   end
 
   create_table "titles", force: :cascade do |t|
